@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro - Computadoras Cañete</title>
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
+    <style>
+        /* Estilos para el video de introducción */
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Oculta las barras de desplazamiento mientras se reproduce el video */
+            height: 100%; /* Asegura que el video cubra toda la pantalla */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+        video {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Video de introducción -->
+    <video id="intro-video" autoplay muted>
+        <source src="video/intro.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+    </video>
+
+    <script>
+        // Redirecciona a la página principal al final del video
+        document.getElementById('intro-video').addEventListener('ended', function () {
+            window.location.href = 'INICIO.html';
+        });
+
+        // Opcional: permitir que el usuario salte el video con un clic
+        document.getElementById('intro-video').addEventListener('click', function () {
+            window.location.href = 'INICIO.html';
+        });
+    </script>
+</body>
+</html>
